@@ -1,4 +1,4 @@
 package com.kodilla.testing.shape;
 
-public class triangle {
+public class Triangle {
 }

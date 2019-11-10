@@ -1,4 +1,4 @@
 package com.kodilla.testing.shape;
 
-public class circle {
+public class Square {
 }
