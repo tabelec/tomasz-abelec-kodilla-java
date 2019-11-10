@@ -54,10 +54,9 @@ public class CollectionTestSuite {
     //When
     OddNumbersExterminator myList = new OddNumbersExterminator();
     ArrayList<Integer> result = myList.exterminate(someList);
-    ArrayList<Integer> result2 = someList2;
 
     System.out.println("Testing in case Array has odd numbers: " + result);
     //Then
-    Assert.assertEquals(result, result2);
+    Assert.assertEquals(someList2, result);
     }
 }
