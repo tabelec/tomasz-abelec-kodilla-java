@@ -24,10 +24,9 @@ public class ShapeCollectorTestSuite {
     }
 
     @Test
-    public void testAddFigure(){
+    public void testAddFigure() {
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
-
         //When
         shapeCollector.addFigure(new Square(5));
         int result = shapeCollector.getSize();
@@ -37,7 +36,7 @@ public class ShapeCollectorTestSuite {
     }
 
     @Test
-    public void testRemoveFigure(){
+    public void testRemoveFigure() {
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
         shapeCollector.addFigure(new Square(5));
@@ -49,12 +48,13 @@ public class ShapeCollectorTestSuite {
         //Then
         Assert.assertEquals(1, result);
     }
+
     @Test
-    public void testGetFigureNegativeIndex(){
+    public void testGetFigureNegativeIndex() {
+        //Given
         ShapeCollector shapeCollector = new ShapeCollector();
         shapeCollector.addFigure(new Square(5));
         shapeCollector.addFigure(new Square(5));
-
         //When
         Shape result = shapeCollector.getFigure(-1);
         System.out.println("Testing removing a figure: " + result);
@@ -63,12 +63,12 @@ public class ShapeCollectorTestSuite {
     }
 
     @Test
-    public void testGetFigurepositive(){
+    public void testGetFigurepositive() {
+        //Given
         ShapeCollector shapeCollector = new ShapeCollector();
         shapeCollector.addFigure(new Square(5));
-        shapeCollector.addFigure(new Triangle(5,5));
+        shapeCollector.addFigure(new Triangle(5, 5));
         shapeCollector.addFigure(new Circle(5));
-
         //When
         Shape result = shapeCollector.getFigure(2);
         System.out.println("Testing removing a figure: " + result);
@@ -77,17 +77,16 @@ public class ShapeCollectorTestSuite {
     }
 
     @Test
-    public void testGetFigureIndexOutOfRange(){
+    public void testGetFigureIndexOutOfRange() {
+        //Given
         ShapeCollector shapeCollector = new ShapeCollector();
         shapeCollector.addFigure(new Square(5));
         shapeCollector.addFigure(new Circle(5));
-        shapeCollector.addFigure(new Triangle(5,5));
-
+        shapeCollector.addFigure(new Triangle(5, 5));
         //When
         Shape result = shapeCollector.getFigure(10);
         System.out.println("Testing removing a figure: " + result);
         //Then
         Assert.assertNull(result);
     }
-
 }
