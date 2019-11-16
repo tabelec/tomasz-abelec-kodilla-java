@@ -63,7 +63,7 @@ public class ShapeCollectorTestSuite {
     }
 
     @Test
-    public void testGetFigurepositive() {
+    public void testGetFigurePositive() {
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
         shapeCollector.addFigure(new Square(5));

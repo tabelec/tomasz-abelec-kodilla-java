@@ -25,4 +25,11 @@ public class ShapeCollector {
     public void showFigures() {
 
     }
+
+    @Override
+    public String toString() {
+        return "ShapeCollector{" +
+                "shapeCollectorList=" + shapeCollectorList +
+                '}';
+    }
 }
