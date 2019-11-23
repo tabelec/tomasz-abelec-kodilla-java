@@ -86,5 +86,37 @@ public class BookDirectoryTestSuite {
         verify(libraryDatabaseMock, times(0)).listBooksWithCondition(anyString());
     }
 
+    @Test
+    public void testListOf0RentedBooks() {
+        // Given
+        LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
+
+        LibraryUser userTom = new LibraryUser("Tom","Kowalski","123456789");
+        List<Book> BooksRented0 = new ArrayList<>();
+        when(libraryDatabaseMock.listBooksInHandsOf(userTom))
+                .thenReturn(BooksRented0);
+        // When
+        List<Book> theListOfBooks0 = libraryDatabaseMock.listBooksInHandsOf(userTom);
+
+        assertEquals(0, theListOfBooks0.size());
+
+    }
+
+   /* @Test
+    public void testListOf1RentedBook() {
+        // Given
+        LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
+        LibraryUser userTom = new LibraryUser("Tom","Kowalski","123456789");
+        List<Book> BooksRented = new ArrayList<>();
+        List<Book> resultListOf1Book = generateListOfNBooks(1);
+        when(libraryDatabaseMock.listBooksInHandsOf(userTom))
+                .thenReturn(BooksRented);
+        // When
+        List<Book> resultListOf1Book = libraryDatabaseMock.listBooksInHandsOf(userTom);
+
+        assertEquals(1, resultListOf1Book.size());
+
+    }*/
+
 
 }

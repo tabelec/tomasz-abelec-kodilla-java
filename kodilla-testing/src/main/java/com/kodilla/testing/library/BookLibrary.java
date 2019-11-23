@@ -21,10 +21,21 @@ public class BookLibrary {
         return bookList;
     }
 
-    public HashMap<LibraryUser, Book> listBooksInHandsOf(LibraryUser libraryUser) {
-        HashMap<LibraryUser, Book> listRentedBooks= new HashMap<>();
-        ArrayList<Book>  rentedBooks = new ArrayList<>();
-        if (rentedBooks.size() == 0) return listRentedBooks;
-        return listRentedBooks;
+    public HashMap<LibraryUser, ArrayList<Book>> listBooksInHandsOf(LibraryUser libraryUser) {
+        HashMap<LibraryUser, ArrayList<Book>> mapOfRentedBooks= new HashMap<>();
+        ArrayList<Book> bookList = new ArrayList<>();
+        bookList.add(new Book("|sada","dasdsa",1957));
+        bookList.add(new Book("|sada","dasdsa",1957));
+        bookList.add(new Book("|sada","dasdsa",1957));
+
+        ArrayList<Book> bookList2 = new ArrayList<>();
+        bookList.add(new Book("|sada","dasdsa",1957));
+        bookList.add(new Book("|sada","dasdsa",1957));
+        bookList.add(new Book("|sada","dasdsa",1957));
+
+        mapOfRentedBooks.put(libraryUser, bookList);
+        mapOfRentedBooks.put(libraryUser, bookList2);
+
+        return mapOfRentedBooks;
     }
 }
