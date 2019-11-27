@@ -4,47 +4,48 @@ import org.junit.Test;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.List;
 
 public class WorldTestSuite {
 
     @Test
     public void testGetPeopleQuantity() {
         //Given
-        ArrayList<Country> europeCountries = new ArrayList<>();
+        List<Country> europeCountries = new ArrayList<>();
 
-        Country polska = new Country("Polska",new BigDecimal("11111111111111111111111121"));
-        Country holandia = new Country("Holandia",new BigDecimal("1112998889888879879781"));
-        Country niemcy = new Country("Niemcy",new BigDecimal("1115645411158414584121"));
-        Country rosja = new Country("Rosja",new BigDecimal("1144841132125470121"));
+        Country polska = new Country("Polska",new BigDecimal("100"));
+        Country holandia = new Country("Holandia",new BigDecimal("100"));
+        Country niemcy = new Country("Niemcy",new BigDecimal("100"));
+        Country rosja = new Country("Rosja",new BigDecimal("100"));
         europeCountries.add(polska);
         europeCountries.add(holandia);
         europeCountries.add(niemcy);
         europeCountries.add(rosja);
 
-        ArrayList<Country> asiaCountries = new ArrayList<>();
-        Country chiny = new Country("Chiny",new BigDecimal("11111111111111111111121"));
-        Country japonia = new Country("Japonia",new BigDecimal("1112998889879879781"));
-        Country korea = new Country("Korea",new BigDecimal("15645411158414584121"));
-        Country indie = new Country("Indie",new BigDecimal("1841132125470121"));
+        List<Country> asiaCountries = new ArrayList<>();
+        Country chiny = new Country("Chiny",new BigDecimal("100"));
+        Country japonia = new Country("Japonia",new BigDecimal("100"));
+        Country korea = new Country("Korea",new BigDecimal("100"));
+        Country indie = new Country("Indie",new BigDecimal("100"));
         asiaCountries.add(chiny);
         asiaCountries.add(japonia);
         asiaCountries.add(korea);
         asiaCountries.add(indie);
 
-        ArrayList<Country> someCountries = new ArrayList<>();
-        Country kraj1 = new Country("Kraj1",new BigDecimal("11111111111111111111121"));
-        Country kraj2 = new Country("Kraj2",new BigDecimal("111299879879781"));
-        Country kraj3 = new Country("Kraj3",new BigDecimal("111564511158414584121"));
-        Country kraj4 = new Country("Kraj4",new BigDecimal("1144132125470121"));
+        List<Country> someCountries = new ArrayList<>();
+        Country kraj1 = new Country("Kraj1",new BigDecimal("100"));
+        Country kraj2 = new Country("Kraj2",new BigDecimal("100"));
+        Country kraj3 = new Country("Kraj3",new BigDecimal("100"));
+        Country kraj4 = new Country("Kraj4",new BigDecimal("100"));
         someCountries.add(kraj1);
         someCountries.add(kraj2);
         someCountries.add(kraj3);
         someCountries.add(kraj4);
 
-        ArrayList<Continent> continents = new ArrayList<>();
-        Continent asia = new Continent("Azja");
-        Continent europe = new Continent("Europa");
-        Continent australia = new Continent("Australia");
+        List<Continent> continents = new ArrayList<>();
+        Continent asia = new Continent("Azja", asiaCountries);
+        Continent europe = new Continent("Europa", europeCountries);
+        Continent australia = new Continent("Australia", someCountries);
 
         continents.add(asia);
         continents.add(europe);
