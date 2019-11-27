@@ -1,5 +1,7 @@
 package com.kodilla.stream.world;
 
+import com.kodilla.stream.sand.SandStorage;
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.math.BigDecimal;
@@ -52,12 +54,11 @@ public class WorldTestSuite {
         continents.add(australia);
 
         //When
-        //BigDecimal totalSand = continents.stream()
-              //  .map(SandStorage::getSandBeansQuantity)
-          //      .reduce(BigDecimal.ZERO, (sum, current) -> sum = sum.add(current));
+        World world = new World(continents);
+        BigDecimal population = world.calculatePopulation();
 
         //Then
-        BigDecimal expectedPeople = new BigDecimal("211111110903703703670");
-        //Assert.assertEquals(expectedSand, totalSand);
+        BigDecimal expectedPopulation = new BigDecimal("1200");
+        Assert.assertEquals(expectedPopulation, population);
     }
 }
