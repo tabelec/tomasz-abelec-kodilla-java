@@ -1,6 +1,5 @@
 package com.kodilla.stream.world;
 
-import com.kodilla.stream.sand.SandStorage;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -15,30 +14,30 @@ public class WorldTestSuite {
         //Given
         List<Country> europeCountries = new ArrayList<>();
 
-        Country polska = new Country("Polska",new BigDecimal("100"));
-        Country holandia = new Country("Holandia",new BigDecimal("100"));
-        Country niemcy = new Country("Niemcy",new BigDecimal("100"));
-        Country rosja = new Country("Rosja",new BigDecimal("100"));
+        Country polska = new Country("Polska", new BigDecimal("100"));
+        Country holandia = new Country("Holandia", new BigDecimal("100"));
+        Country niemcy = new Country("Niemcy", new BigDecimal("100"));
+        Country rosja = new Country("Rosja", new BigDecimal("100"));
         europeCountries.add(polska);
         europeCountries.add(holandia);
         europeCountries.add(niemcy);
         europeCountries.add(rosja);
 
         List<Country> asiaCountries = new ArrayList<>();
-        Country chiny = new Country("Chiny",new BigDecimal("100"));
-        Country japonia = new Country("Japonia",new BigDecimal("100"));
-        Country korea = new Country("Korea",new BigDecimal("100"));
-        Country indie = new Country("Indie",new BigDecimal("100"));
+        Country chiny = new Country("Chiny", new BigDecimal("100"));
+        Country japonia = new Country("Japonia", new BigDecimal("100"));
+        Country korea = new Country("Korea", new BigDecimal("100"));
+        Country indie = new Country("Indie", new BigDecimal("100"));
         asiaCountries.add(chiny);
         asiaCountries.add(japonia);
         asiaCountries.add(korea);
         asiaCountries.add(indie);
 
         List<Country> someCountries = new ArrayList<>();
-        Country kraj1 = new Country("Kraj1",new BigDecimal("100"));
-        Country kraj2 = new Country("Kraj2",new BigDecimal("100"));
-        Country kraj3 = new Country("Kraj3",new BigDecimal("100"));
-        Country kraj4 = new Country("Kraj4",new BigDecimal("100"));
+        Country kraj1 = new Country("Kraj1", new BigDecimal("100"));
+        Country kraj2 = new Country("Kraj2", new BigDecimal("100"));
+        Country kraj3 = new Country("Kraj3", new BigDecimal("100"));
+        Country kraj4 = new Country("Kraj4", new BigDecimal("100"));
         someCountries.add(kraj1);
         someCountries.add(kraj2);
         someCountries.add(kraj3);
