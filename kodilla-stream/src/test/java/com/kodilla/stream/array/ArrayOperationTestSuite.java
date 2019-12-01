@@ -2,11 +2,8 @@ package com.kodilla.stream.array;
 
 import org.junit.*;
 
-import java.util.OptionalDouble;
-import java.util.stream.IntStream;
-
 public class ArrayOperationTestSuite {
-    int n = 1;
+    private static int n = 0;
 
     @BeforeClass
     public static void beforeClass() {
@@ -20,31 +17,37 @@ public class ArrayOperationTestSuite {
 
     @Before
     public void before() {
-        System.out.println("Test nr " + n);
         n++;
+        System.out.println("Executing Test nr " + n);
     }
 
     @After
     public void after() {
-        System.out.println("Test nr " + n);
-        n++;
+        System.out.println("Test completed");
     }
 
     @Test
     public void testGetAvarage() {
         //Given
-        int[] numbersList = {2, 2, 2, 2, 2, 2, 2, 2, 2, 2};
-        int size = numbersList.length;
+        int[] numbersList5 = {2, 2, 2, 2};
 
         //When
-        int[] numbersList2 = ArrayOperations.getAvarage(numbersList);
+        double numbersList2 = ArrayOperations.getAvarage(numbersList5);
 
         //Then
-        OptionalDouble avaregeInList = IntStream.range(0, size)
-                .map(n -> numbersList2[n])
-                .average();
+        Assert.assertEquals(2, numbersList2, 0.01);
+    }
 
-        Assert.assertEquals(OptionalDouble.of(2.0), avaregeInList);
+    @Test
+    public void testGetAvarageEmptyArray() {
+        //Given
+        int[] numbersList5 = {};
+
+        //When
+        double numbersList2 = ArrayOperations.getAvarage(numbersList5);
+
+        //Then
+        Assert.assertEquals(0, numbersList2, 0.01);
     }
 }
 
